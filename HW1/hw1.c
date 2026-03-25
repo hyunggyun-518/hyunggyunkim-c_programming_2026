@@ -45,7 +45,7 @@ int main() {
     /* 8강 - 사용자 경기 */
     opponentNum = 2;
 
-    while (1) {
+    for (;;) {
         printf("====================================================\n");
         printf("8강  - 상대 : %s\n", name[opponentNum]);
         printf("====================================================\n");
@@ -55,7 +55,7 @@ int main() {
         scanf("%d", &user);
 
         if (user != 1 && user != 2 && user != 3) {
-            printf("\n잘못된 입력입니다. 다시 입력하세요.\n\n");
+            printf("\n1,2,3 중에서 입력하세요\n\n");
             continue;
         }
 
@@ -82,14 +82,14 @@ int main() {
     }
 
     if (myWin == 0) {
-        printf("토너먼트 탈락!\n");
+        printf("아쉽습니다. 다음 기회에!\n");
         return 0;
     }
 
     /* 4강 - 사용자 경기 */
     opponentNum = win1;
 
-    while (1) {
+    for (;;) {
         printf("====================================================\n");
         printf("4강  - 상대 : %s\n", name[opponentNum]);
         printf("====================================================\n");
@@ -99,7 +99,7 @@ int main() {
         scanf("%d", &user);
 
         if (user != 1 && user != 2 && user != 3) {
-            printf("\n잘못된 입력입니다. 다시 입력하세요.\n\n");
+            printf("\n1,2,3 중에서 입력하세요\n\n");
             continue;
         }
 
@@ -126,7 +126,7 @@ int main() {
     }
 
     if (myWin == 0) {
-        printf("4강 탈락!\n");
+        printf("아쉽습니다. 다음 기회에!\n");
         return 0;
     }
 
@@ -137,7 +137,7 @@ int main() {
         opponentNum = win3;
 
     /* 결승 */
-    while (1) {
+    for (; ;) {
         printf("====================================================\n");
         printf("결승  - 상대 : %s\n", name[opponentNum]);
         printf("====================================================\n");
@@ -147,7 +147,7 @@ int main() {
         scanf("%d", &user);
 
         if (user != 1 && user != 2 && user != 3) {
-            printf("\n잘못된 입력입니다. 다시 입력하세요.\n\n");
+            printf("\n1,2,3 중에서 입력하세요\n\n");
             continue;
         }
 
@@ -163,12 +163,12 @@ int main() {
                  (user == 2 && com == 1) ||
                  (user == 3 && com == 2)) {
             printf("이겼습니다!\n\n");
-            printf("축하합니다! 최종 우승입니다!\n");
+            printf("축하합니다! 우승!\n");
             break;
         }
         else {
             printf("졌습니다!\n\n");
-            printf("아쉽지만 준우승입니다.\n");
+            printf("아쉽습니다. 다음 기회에!\n");
             break;
         }
     }
