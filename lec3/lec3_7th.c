@@ -2,12 +2,7 @@
 #define N 3
 int main() {
 int a[N];
-for (int i = 0; i < N; ++i) {
-printf("a[%d]: ", i);
-scanf("%d", &a[i]);
-}
-for (int i = 0; i < N; ++i) {
-printf("a[%d] = %d\n", i, a[i]);
-}
+int a_size = sizeof(a)/sizeof(int);
+printf("Size of array a: %d\n", a_size);
 return 0;
 }
